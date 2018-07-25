@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="328.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.TableDoctorController">
+	<children>
+		<TableView fx:id="table_doctor" prefHeight="278.0" prefWidth="451.0">
+			<columns>
+				<TableColumn fx:id="nameKS_column" prefWidth="84.0" text="科室名称" />
+				<TableColumn fx:id="code_column" prefWidth="73.0" text="医生编号" />
+				<TableColumn fx:id="nameDoctor_column" prefWidth="73.0" text="医生名称" />
+				<TableColumn fx:id="type_column" prefWidth="70.0" text="号种类别" />
+				<TableColumn fx:id="num_column" prefWidth="75.0" text="挂号人次" />
+				<TableColumn fx:id="income_column" prefWidth="75.0" text="收入合计" />
+			</columns>
+		</TableView>
+		<Button fx:id="btn_refresh" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#superloadData" text="Refresh" />
+	</children>
+</AnchorPane>

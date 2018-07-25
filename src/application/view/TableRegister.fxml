@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="331.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.TableRegisterController">
+	<children>
+		<TableView fx:id="table_register" layoutY="-1.0" prefHeight="302.0" prefWidth="477.0" >
+			<columns>
+				<TableColumn fx:id="code_column" prefWidth="103.0" text="挂号编号" />
+				<TableColumn fx:id="name_column" prefWidth="106.0" text="病人名称" />
+				<TableColumn fx:id="date_column" prefWidth="171.0" text="挂号日期时间" />
+				<TableColumn fx:id="expert_column" prefWidth="96.0" text="号种类别" />
+			</columns>
+		</TableView>
+		<Button fx:id="btn_refresh" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#loadData" text="Refresh" />
+	</children>
+</AnchorPane>

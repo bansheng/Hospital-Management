@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.DoctorController">
+   <top>
+      <AnchorPane fx:id="datePane" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="19.0" text="开始日期：" />
+            <Label layoutX="322.0" layoutY="19.0" prefHeight="20.0" prefWidth="76.0" text="截止日期：" />
+            <DatePicker fx:id="date_start" layoutX="81.0" layoutY="14.0" prefHeight="30.0" prefWidth="133.0" />
+            <DatePicker fx:id="date_end" layoutX="390.0" layoutY="14.0" prefHeight="30.0" prefWidth="132.0" />
+            <TextField fx:id="time_start" layoutX="220.0" layoutY="14.0" prefHeight="30.0" prefWidth="91.0" />
+            <TextField fx:id="time_end" layoutX="526.0" layoutY="14.0" prefHeight="30.0" prefWidth="91.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <MenuBar fx:id="menu" prefHeight="39.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="挂号">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#registertable" text="挂号信息" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="收入">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#incomeTable" text="收入信息" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="About">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#myexit" text="退出" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </bottom>
+   <right>
+      <Pane prefHeight="332.0" prefWidth="84.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="4.0" layoutY="285.0" text="医生姓名：" />
+            <Label fx:id="lb_doctorname" layoutX="16.0" layoutY="305.0" prefHeight="20.0" prefWidth="62.0" text="Label" />
+            <Button fx:id="btn_choose" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#chooseincome" prefHeight="30.0" prefWidth="66.0" text="筛选" />
+         </children>
+      </Pane>
+   </right>
+</BorderPane>
